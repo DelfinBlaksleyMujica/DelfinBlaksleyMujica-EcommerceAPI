@@ -194,7 +194,7 @@ ${ listadoProductosWapp}`
             //Envio de mensaje al cliente
             const infoMensaje = await twilioClient.messages.create({
                 from: twilioPhone,
-                to: `$+54{req.session.telefono}`,
+                to: `$+549${req.session.telefono}`,
                 body:"El pedido fue recibido correctamente y se encuentra en proceso."
             })
             res.status(200).send( { status:"succes" , data: req.session.carrito.productos , message:"Se realizo correctamente el pedido de compra" } )
